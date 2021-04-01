@@ -32,15 +32,15 @@ function calculateAction(ammoniaRes, nitriteRes, nitrateRes) {
   if (ammoniaRes === 4 || nitriteRes === 4) {
     flag = greaterRisk(ammoniaRes, nitriteRes);
     waterCondition = "High risk";
-    action = `30% water change, treat water with double dose of Seachem Prime daily for at least 3 days to protect your frogs from the ${flag}, test again tomorrow`;
+    action = `30% water change, treat water with double dose of Seachem Prime daily for at least 3 days to protect your frogs from the ${flag}, test again TOMORROW, then input your updated water values and follow the lastest recommendation`;
   } else if (ammoniaRes === 2 || nitriteRes === 2) {
     flag = greaterRisk(ammoniaRes, nitriteRes);
     waterCondition = "Intermediate risk";
-    action = `${nitrateMessage}, treat water with double dose of Seachem Prime daily for at least 3 days to protect your frogs from the ${flag}, test again in 1-2 days`;
+    action = `${nitrateMessage}, treat water with double dose of Seachem Prime daily for at least 3 days to protect your frogs from the ${flag}, test again in 1-2 days, then input your updated water values and follow the lastest recommendation`;
   } else if (ammoniaRes > 0 || nitriteRes > 0) {
     flag = greaterRisk(ammoniaRes, nitriteRes);
     waterCondition = "Low risk";
-    action = `${nitrateMessage}, treat water with single dose of Seachem Prime daily for at least 3 days to protect your frogs from the ${flag}, test again this week`;
+    action = `${nitrateMessage}, treat water with single dose of Seachem Prime daily for at least 3 days to protect your frogs from the ${flag}, test again this week, then input your updated water values and follow the lastest recommendation`;
   } else if (ammoniaRes === 0 && nitriteRes === 0) {
     if (nitrateRes !== 0) {
       waterCondition = "Safe";
