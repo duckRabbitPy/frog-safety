@@ -39,7 +39,7 @@ function calculateAction(ammoniaRes, nitriteRes, nitrateRes) {
     action = `${nitrateMessage}, treat water with double dose of Seachem Prime daily for at least 3 days to protect your frogs from the ${flag}, test again in 1-2 days, then input your updated water values and follow the lastest recommendation`;
   } else if (ammoniaRes > 0 || nitriteRes > 0) {
     flag = greaterRisk(ammoniaRes, nitriteRes);
-    waterCondition = "Low risk";
+    waterCondition = "Almost safe";
     action = `${nitrateMessage}, treat water with single dose of Seachem Prime daily for at least 3 days to protect your frogs from the ${flag}, test again this week, then input your updated water values and follow the lastest recommendation`;
   } else if (ammoniaRes === 0 && nitriteRes === 0) {
     if (nitrateRes !== 0) {
