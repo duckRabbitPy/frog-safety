@@ -95,7 +95,7 @@ function addToResult(newObj) {
 
     if (waterCondition === "Safe") {
       condition = "safeStyle";
-    } else if (waterCondition === "Low risk") {
+    } else if (waterCondition === "Almost safe") {
       condition = "lowStyle";
     } else if (waterCondition === "Intermediate risk") {
       condition = "intermediateStyle";
